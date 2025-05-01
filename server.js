@@ -6,11 +6,15 @@ import cors from "cors";
 const app = express();
 app.use(cors());
 
+app.get('/', (req, res) => {
+  res.send('Hello, this is a simple message from the server!');
+});
+
 const server = createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "https://chat-box-app-imqn.vercel.app", 
+    origin: "https://chat-box-app-imqn.vercel.app/", 
     methods: ["GET", "POST"]
   }
 });
