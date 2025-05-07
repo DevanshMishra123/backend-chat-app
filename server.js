@@ -14,7 +14,7 @@ const server = createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "https://chat-box-app-tkyl.vercel.app", 
+    origin: "https://messenger-app-r55v.vercel.app", 
     methods: ["GET", "POST"]
   }
 });
